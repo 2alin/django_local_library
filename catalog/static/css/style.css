@@ -1,0 +1,36 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.content {
+    max-width: 720px;
+}
+
+p {
+    text-align: justify;
+}
+
+table {
+    border-spacing: 12px 8px;
+    border-collapse: unset;
+}
+
+table ul.errorlist {
+    list-style: none;
+    padding-left: 0;
+    color: red;
+    font-style: italic;
+
+}
+
+nav.edit-nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+nav.edit-nav ul li {
+    margin-right: 16px;
+}
