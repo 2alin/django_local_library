@@ -1,3 +1,9 @@
+:root {
+    --main-text-color: #000;
+    --secondary-text-color: #636373;
+    --menu-main-color: #636373;
+}   
+
 body {
     max-width: 800px;
     margin: 0 auto;
@@ -73,18 +79,12 @@ p {
     /* text-align: justify; */
 }
 
-table {
+/* table {
     border-spacing: 12px 8px;
     border-collapse: unset;
-}
-
-table ul.errorlist {
-    list-style: none;
-    padding-left: 0;
-    color: red;
-    font-style: italic;
-
-}
+} */
+/* 
+ */
 
 nav.edit-nav ul{
     list-style: none;
@@ -95,6 +95,75 @@ nav.edit-nav ul{
 nav.edit-nav ul li {
     margin-right: 16px;
 }
+
+
+
+/* ------------------------- */
+/* Styling Item Lists */
+
+.text-danger {
+    color: #ff0039;
+}
+
+.content ul {
+    list-style: circle;
+}
+
+.content ul li {
+    margin-bottom: 8px;
+}
+
+.content a{
+    outline: none;
+    text-decoration: none;
+    color: #0060df;
+}
+
+.content a:visited{
+    color: #0060df;
+}
+
+.content a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* ------------------------- */
+/* Styling Forms */
+
+form table {
+    border-spacing: 0 12px;
+}
+
+form label {
+    padding-right: 8px;
+}
+
+form .errorlist {
+    list-style: none;
+    padding-left: 0;
+    color: red;
+    font-style: italic;
+
+}
+
+.helptext {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+form input[type='submit'] {
+    margin-top: 8px;
+    padding: 0 16px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    /* background-color: var(--menu-main-color); */
+    /* color: #fff; */
+    /* border-radius: 4px; */
+
+}
+
 
 
 @media screen and (max-width: 580px){
