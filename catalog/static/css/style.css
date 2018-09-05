@@ -1,15 +1,76 @@
-.sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Helvetica, sans-serif;
 }
 
-.content {
-    max-width: 720px;
+div.menu {
+    display: none;
+    margin-top: 8px;
+    width: 36px;
+    height: 36px;
+    background-color: #636373;
+    background-image: url('../assets/menu.svg');
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div.container-fluid div.row{
+    display: flex;
+}
+
+div.sidebar {
+
+}
+
+div.content {
+    padding-right: 16px;
+}
+
+ul.sidebar-nav {
+    margin-top: 20px;
+    margin-left: 8px;
+    padding: 0;
+    padding-right: 16px;
+    list-style: none;
+    font-size: 1rem;  
+    width: 140px;
+    color: #636373;
+    font-family: Source Sans Pro, sans-serif;
+}
+
+ul.sidebar-nav li {
+    padding: 4px 0
+}
+ul.sidebar-nav li em {
+    /* background-color: #005a71;
+    color:#fff; */
+    padding: 0 4px;
+    border-bottom: 3px solid #636373;
+
+}
+
+ul.sidebar-nav li a {
+    padding: 4px 4px;
+    outline: none;
+    display: box;
+    text-decoration: none;
+    color: #636373;
+}
+
+ul.sidebar-nav li a:visited {
+    color: #636373;
+}
+
+
+
+ul.sidebar-nav li a:hover {
+    background-color: #636373;
+    color: #fff;
 }
 
 p {
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 table {
@@ -33,4 +94,62 @@ nav.edit-nav ul{
 }
 nav.edit-nav ul li {
     margin-right: 16px;
+}
+
+
+@media screen and (max-width: 580px){
+    div.container-fluid div.row{
+        display: initial;   
+    }
+    
+    div.menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    div.sidebar {
+        display: none;
+    }
+    
+    div.sidebar.hide{
+        display: none;
+    }
+
+    div.sidebar.show{
+        display: initial;
+    }
+
+    ul.sidebar-nav {
+        /* border: 3px solid #636373; */
+        margin: 0;
+        max-width: 140px;
+        padding: 8px;
+        background-color: #636373;
+        color: #fff;
+    }
+
+    ul.sidebar-nav li em {
+        border-bottom: 3px solid #fff;
+    }
+    
+    ul.sidebar-nav li a,
+    ul.sidebar-nav li a:visited{
+        color: #fff;
+    }
+
+    ul.sidebar-nav li a:hover {
+        background-color: #fff;
+        color: #636373;
+    }
+    
+
+    body {
+        margin : 0;
+        padding: 0 8px;
+    }
+    div.content {
+        padding: 0;
+    }
+
+
 }
