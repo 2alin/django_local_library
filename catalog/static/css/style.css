@@ -1,5 +1,39 @@
+
+/* --------------- */
+/* fonts */
+@font-face {
+    font-family: "Source Sans Pro";
+    src: 
+        local("Source Sans Pro Regular"),
+        url('../assets/SourceSansPro-Regular.otf.woff2') format('woff2'), 
+        url('../assets/SourceSansPro-Regular.otf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: 
+        local("Source Sans Pro Bold"),
+        url('../assets/SourceSansPro-Bold.otf.woff2') format('woff2'), 
+        url('../assets/SourceSansPro-Bold.otf.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: 
+        local("Source Sans Pro Italic"),
+        url('../assets/SourceSansPro-It.otf.woff2') format('woff2'), 
+        url('../assets/SourceSansPro-It.otf.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* ---------------- */
+/* Styling General */
+
 :root {
-    --main-text-color: #000;
+    --main-text-color: #0c0c0d;
     --secondary-text-color: #636373;
     --menu-main-color: #636373;
 }   
@@ -7,7 +41,9 @@
 body {
     max-width: 800px;
     margin: 0 auto;
-    font-family: Helvetica, sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
+    color: var(--main-text-color);
+    /* color: pink; */
 }
 
 div.menu {
@@ -25,9 +61,6 @@ div.container-fluid div.row{
     display: flex;
 }
 
-div.sidebar {
-
-}
 
 div.content {
     padding-right: 16px;
@@ -75,17 +108,6 @@ ul.sidebar-nav li a:hover {
     color: #fff;
 }
 
-p {
-    /* text-align: justify; */
-}
-
-/* table {
-    border-spacing: 12px 8px;
-    border-collapse: unset;
-} */
-/* 
- */
-
 nav.edit-nav ul{
     list-style: none;
     padding: 0;
@@ -103,6 +125,18 @@ nav.edit-nav ul li {
 
 .text-danger {
     color: #ff0039;
+}
+
+.text-success {
+    color: #12bc00;
+}
+
+.text-warning {
+    color: #ff9400;
+}
+
+.text-muted {
+    color: var(--secondary-text-color);
 }
 
 .content ul {
@@ -140,6 +174,13 @@ form label {
     padding-right: 8px;
 }
 
+form input,
+form select {
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: inherit;
+}
+
 form .errorlist {
     list-style: none;
     padding-left: 0;
@@ -157,7 +198,6 @@ form input[type='submit'] {
     margin-top: 8px;
     padding: 0 16px;
     font-size: 0.95rem;
-    font-family: inherit;
     /* background-color: var(--menu-main-color); */
     /* color: #fff; */
     /* border-radius: 4px; */
