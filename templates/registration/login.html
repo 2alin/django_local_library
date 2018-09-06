@@ -37,7 +37,12 @@
         <tr>
             <td>
                 <input type="submit" value="Login">
-                <input type="hidden" name="next" value="{{ next }}">
+                
+                {% if '/accounts/' in next %}
+                    <input type="hidden" name="next" value="/">    
+                {% else %}
+                    <input type="hidden" name="next" value="{{ next }}">
+                {% endif %}
             </td>
         </tr>
     </table>
