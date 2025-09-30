@@ -1,3 +1,7 @@
+# Archived project
+
+This project is no longer maintained.
+
 # django_local_library
 Local Library website test written in Django - Mozilla Developer Network tutorial.
 
